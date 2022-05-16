@@ -15,17 +15,6 @@ class ViewController: UIViewController {
     var round: Int = 1
     var points: Int = 0
 
-    lazy var secondViewController: SecondViewController = getSecondViewController()
-    // приватный метод, загружающий View Controller
-    private func getSecondViewController() -> SecondViewController {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewController(identifier: "SecondViewController")
-        return viewController as! SecondViewController
-    }
-    
-    @IBAction func showNextScreen() {
-        self.present(secondViewController, animated: true, completion: nil)
-    }
     
     @IBAction func checkNumber() {    // если игра только начинается
        // получаем значение на слайдере
