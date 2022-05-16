@@ -15,6 +15,18 @@ class ViewController: UIViewController {
     var round: Int = 1
     var points: Int = 0
 
+    lazy var secondViewController: SecondViewController = getSecondViewController()
+    // приватный метод, загружающий View Controller
+    private func getSecondViewController() -> SecondViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(identifier: "SecondViewController")
+        return viewController as! SecondViewController
+    }
+    
+    @IBAction func showNextScreen() {
+        self.present(secondViewController, animated: true, completion: nil)
+    }
+    
     @IBAction func checkNumber() {    // если игра только начинается
        // получаем значение на слайдере
         let numSlider = Int(self.slider.value.rounded())        // сравниваем значение с загаданным        // и подсчитываем очки
@@ -41,11 +53,18 @@ class ViewController: UIViewController {
         self.label.text = String(self.number)
     }
     
+    
+    override func loadView() {
+        super.loadView()
+        let versionLabel = UILabel(frame: CGRect(x: 20, y: 10, width: 200, height: 20))    // изменяем текст метки
+        versionLabel.text = "Версия 1.1"    // добавляем метку в родительский view
+        self.view.addSubview(versionLabel)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.number = Int.random(in: 1...50)
         self.label.text = String(self.number)        // устанавливаем счетчик раундов на 1
-        // Do any additional setup after loading the view.
     }
 
 
