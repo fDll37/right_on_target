@@ -8,16 +8,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet var slider: UISlider!
     @IBOutlet var label: UILabel!
     var number: Int = 0
     var round: Int = 1
     var points: Int = 0
-
+    let text: Int = 0
+    
     
     @IBAction func checkNumber() {    // если игра только начинается
-       // получаем значение на слайдере
+        // получаем значение на слайдере
         let numSlider = Int(self.slider.value.rounded())        // сравниваем значение с загаданным        // и подсчитываем очки
         if numSlider > self.number {
             self.points += 50 - numSlider + self.number
@@ -55,7 +56,7 @@ class ViewController: UIViewController {
         self.number = Int.random(in: 1...50)
         self.label.text = String(self.number)        // устанавливаем счетчик раундов на 1
     }
-
-
+    
+    
 }
 

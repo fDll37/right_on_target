@@ -28,12 +28,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="01.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ptp-4R-OJc">
-                                <rect key="frame" x="40" y="199" width="20" height="20"/>
+                                <rect key="frame" x="40" y="199" width="20" height="17.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemPurpleColor"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="50.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GQM-pV-GfG">
-                                <rect key="frame" x="835" y="198" width="20" height="20"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="249" fixedFrame="YES" image="50.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GQM-pV-GfG">
+                                <rect key="frame" x="835" y="198" width="20" height="17.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemPurpleColor"/>
                             </imageView>
